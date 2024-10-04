@@ -1,0 +1,171 @@
+/* Reset default margins and paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s cubic-bezier(0.42, 0, 0.58, 1); /* Set easing for non-linear animation */
+}
+
+.container.down {
+    transform: translateY(-100%); /* Move the container up */
+}
+
+.container.down-fast {
+    transition: transform 0.25s cubic-bezier(0.42, 0, 0.58, 1); /* Faster animation */
+    transform: translateY(-100%); /* Move the container up */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.fade-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0; /* Fully transparent initially */
+    animation: fadeToBlack 10s 2s forwards; /* Fade to black over 10 seconds after 5 second delay */
+    z-index: 1; /* Ensure it is above the video but below the menu */
+}
+
+@keyframes fadeToBlack {
+    to {
+        opacity: 1; /* Fully opaque in the end */
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2; /* Higher index to stay above the overlay */
+}
+
+.menu-item {
+    font-family: Arial, sans-serif;
+    font-size: 70px;
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    animation: reveal 2s forwards;
+    animation-delay: 1s;
+    cursor: pointer;
+    text-align: center;
+
+    /* New styles for hover animation */
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.menu-item:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.menu-item:nth-child(3) {
+    animation-delay: 2s;
+}
+.menu-item:nth-child(4) {
+    animation-delay: 2.5s;
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Modify or add styles for each section as needed */
+    position: relative;
+    z-index: 0;
+}
+
+#about-section {
+    background-color: lightblue;
+}
+
+
+#projects-section {
+    background-color: lightgreen;
+}
+
+#contact-section {
+    background-color: lightcoral;
+}
+
+.home-button {
+    position: absolute;
+    font-size: 120px;
+    cursor: pointer;
+    color: #333; /* Arrow color */
+    transition: color 0.3s ease, transform 0.2s ease; /* Transition for color and size */
+    right: 80px;
+    bottom: 40px;
+}
+
+#copyright {
+    text-align: center;
+    z-index: 1;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    color: ghostwhite;
+    font-size: 20px;
+    opacity: 0;
+    animation: reveal 1.5s forwards;
+    animation-delay: 7s;
+    z-index: 2;
+}
+
+#copyright  {
+    text-align: center;
+    animation-delay: 0.8s;
+}
+#impressum  {
+    animation-delay: 1s;
+    text-align: left;
+    left: 100px;
+}
+
+#datenschutz    {
+    text-align: right;
+    animation-delay: 1.2s;
+    right: 100px;
+}
