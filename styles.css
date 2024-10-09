@@ -65,7 +65,7 @@ body, html {
 }
 
 .menu-item {
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     font-size: 70px;
     color: white;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
@@ -136,10 +136,7 @@ body, html {
     bottom: 40px;
 }
 
-#copyright {
-    text-align: center;
-    z-index: 1;
-}
+
 
 .footer {
     width: 100%;
@@ -152,20 +149,24 @@ body, html {
     animation: reveal 1.5s forwards;
     animation-delay: 7s;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
-#copyright  {
-    text-align: center;
-    animation-delay: 0.8s;
-}
-#impressum  {
-    animation-delay: 1s;
+.impressum  {
     text-align: left;
-    left: 100px;
+    flex: 1;
+    margin-left: 100px; 
+}
+.copyright {
+    text-align: center;
+    flex: 1;    
 }
 
-#datenschutz    {
+.datenschutz    {
     text-align: right;
-    animation-delay: 1.2s;
-    right: 100px;
+    margin-right: 100px;
+    flex: 1;
 }

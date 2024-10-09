@@ -9,7 +9,6 @@ document.getElementById('about-me',"about").addEventListener('click', function (
         aboutSection.scrollIntoView({behavior: 'smooth'});
         container.classList.remove('down');
     }, 500);
-    document.getElementsByClassName("pie-parent")[0].classList.remove("pie-hidden")
 });
 
 document.getElementById('projects').addEventListener('click', function () {
@@ -18,7 +17,6 @@ document.getElementById('projects').addEventListener('click', function () {
         projectsSection.scrollIntoView({behavior: 'smooth'});
         container.classList.remove('down-fast');
     }, 500);
-    document.getElementsByClassName("pie-parent")[0].classList.remove("pie-hidden")
 
 });
 
@@ -28,15 +26,13 @@ document.getElementById('contact').addEventListener('click', function () {
         contactSection.scrollIntoView({behavior: 'smooth'});
         container.classList.remove('down-fast');
     }, 500);
-    document.getElementsByClassName("pie-parent")[0].classList.remove("pie-hidden")
+   
 });
 
 
 document.querySelectorAll('.home-button').forEach(function (button) {
     button.addEventListener('click', function () {
         window.location.href = 'index.html';
-        document.getElementsByClassName("pie-parent")[0].classList.add("pie-hidden")
-        document.getElementsByClassName("pie-parent")[0].animate()
 
     });
 });

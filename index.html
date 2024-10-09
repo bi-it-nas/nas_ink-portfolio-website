@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Sameul Nahar</title>
+    <title>NAS - Ink Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="hover.css">
     <link rel="stylesheet" href="pie.css">
+    <link rel="html" href="circular_menu.html">
 </head>
 <body>
+
 <!-- Container video -->
 
-
+<main>
 <div class="container" id="container">
     <!-- Background video -->
     <video autoplay muted playsinline class="background-video" id="background-video">
@@ -21,64 +23,33 @@
 
     <!-- Overlay to transition to black -->
     <div class="fade-overlay"></div>
-
     <!-- Menu -->
+    <nav>
     <div class="menu">
         <div class="menu-item" id="about-me">About me</div>
         <div class="menu-item" id="projects">Projects</div>
         <div class="menu-item" id="contact">Contact</div>
     </div>
-
+    </nav>
+    
     <footer class="footer">
-        <div class="footer" id="copyright">© 2024 Copyright: Sameul Nahar</div>
-        <div class="footer" id="impressum">Impressum</div>
-        <div class="footer" id="datenschutz">Datenschutz</div>
+        <div class="impressum">Impressum</div>
+        <div class="copyright">© 2024 Copyright: Sameul Nahar</div>
+        <div class="datenschutz">Datenschutz</div>
     </footer>
+</main>
 
-</div>
-
-    <div class="pie-parent pie-hidden">
-        <div class="pie pie1" onclick="document.body.classList.remove('active')">
-            <div class="pie-color pie-color1">
-
-            </div>
-        </div>
-        <div class="pie pie2" onclick="document.body.classList.remove('active')">
-            <div class="pie-color pie-color2">
-
-            </div>
-        </div>
-        <div class="pie pie3" onclick="document.body.classList.remove('active')">
-            <div class="pie-color pie-color3">
-
-            </div>
-        </div>
-        <div class="kaninchen" onclick="document.body.classList.toggle('active')">
-            <svg class="hamburger" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
-                <g
-                        fill="none"
-                        stroke="#000"
-                        stroke-width="7.999"
-                        stroke-linecap="round"
-                >
-                    <path d="M 55,26.000284 L 24.056276,25.999716" />
-                    <path d="M 24.056276,49.999716 L 75.943724,50.000284" />
-                    <path d="M 45,73.999716 L 75.943724,74.000284" />
-                    <path d="M 75.943724,26.000284 L 45,25.999716" />
-                    <path d="M 24.056276,73.999716 L 55,74.000284" />
-                </g>
-            </svg>
-        </div>
-    </div>
 <!--FOOTER MIT IMPRESSUM UND DATENSCHUTZ -->
 
 
 <!-- About me -->
+<section class="aboutmesection">
 <div class="section" id="about-section">
     <h1>About me</h1>
     <p>Details about me...</p>
     <div class="home-button">&#x2302;</div>
 </div>
+</section>
 <!-- Projects -->
 <div class="section" id="projects-section">
     <h1>Projects</h1>
@@ -91,11 +62,10 @@
     <h1>Contact</h1>
     <p>Details about contact...</p>
     <div class="home-button">&#x2302;</div>
-
 </div>
+
 
 <!-- Reference to external JavaScript files -->
 <script src="scripts.js"></script>
-<script src="hover.js"></script>
 </body>
 </html>
