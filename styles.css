@@ -92,16 +92,7 @@ body, html {
     animation-delay: 2.5s;
 }
 
-@keyframes reveal {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 
 .section {
     height: 100vh;
@@ -139,26 +130,50 @@ body, html {
 
 
 .footer {
-    width: 100%;
+    width: 100vw;
     height: 100px;
+    max-height: 20vh;
     position: absolute;
     bottom: 0;
-    color: ghostwhite;
-    font-size: 20px;
     opacity: 0;
+    color: ghostwhite;
+    font-size: 1.2rem;
     animation: reveal 1.5s forwards;
     animation-delay: 7s;
     z-index: 2;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 
+}
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20) scale(0.9);
+
+    }
+    100% {$
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+
+    }
 }
 
 .impressum  {
     text-align: left;
     flex: 1;
-    margin-left: 100px; 
+    margin: 10%; 
 }
 .copyright {
     text-align: center;
@@ -167,6 +182,6 @@ body, html {
 
 .datenschutz    {
     text-align: right;
-    margin-right: 100px;
+    margin: 10%;
     flex: 1;
 }
